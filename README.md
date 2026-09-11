@@ -1,8 +1,9 @@
 # Competitor Analysis Pipeline
 
-Extracts, structures, data curation, QC, and summarizes competitor clinical trial readout for **immunology**. Primary Goal:
+Extracts, structures, data curation, QC, and summarizes competitor clinical trial readout for **immunology**. 
 ```bash
-Quick, Accurate, Insights Competitor Readout Slide Deck for Urgent Request;
+Primary output: Quick, Accurate, Insights Competitor Readout Slide Deck for Urgent Request;
+Secondary output: Auto-append 
 
 Deal with Special Cases In Development: 
 Competitor didn't report placebo-arm response rate; 
