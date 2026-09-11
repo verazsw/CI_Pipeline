@@ -1,18 +1,13 @@
 # Competitor Analysis Pipeline
 
-Extracts, structures, data curation, QC, and summarizes competitor clinical trial readout for **immunology**. 
-```bash
-Primary output: Quick, Accurate, Insights Competitor Readout Slide Deck for Urgent Request;
-Secondary output: Auto-append 
+Primary output: Quick, Accurate, Insights Competitor Readout Slide Deck for Urgent Request. Extracts, structures, data curation, QC, and summarizes competitor clinical trial readout for **immunology**. 
 
-Deal with Special Cases In Development: 
-Competitor didn't report placebo-arm response rate; 
-Competitor didn't report per-arm sample size; 
-Competitor only publish Ph1 result; 
-Competitor BL characteristics are different; 
-Competitor only publish intypical timepoints results
-... 
-```
+<!-- # Deal with Special Cases In Development: 
+# Competitor didn't report placebo-arm response rate; 
+# Competitor didn't report per-arm sample size; 
+# Competitor only publish Ph1 result; 
+# Competitor BL characteristics are different; 
+# Competitor only publish intypical timepoints results -->
 
 ## Setup
 
@@ -38,7 +33,7 @@ Run this pipeline for the zumilokibart Ph2 Atopic Dermatitis readout.
 Source: competitor readout press release are in: ~/competitor_agent/figures/, CI land update: ~/competitor_agent/figures/, ...
 Existing BNMA input excel file for the AtD to edit: /Users/L099645/Library/CloudStorage/OneDrive-EliLillyandCompany/Documents/development/CI_test
 Batman BNMA output path for the each endpoint: EASI: smb://lrlhps/users/xxxxx/EASI75_Ph2Ph3/AtD_Zum_Ph23/_output/batmanNMA_all_20260530_214958_output/, IGA: ...
-I want: BNMA ridge plot + detailed slide deck
+I want: Append new competitor data into this indication's Masterfile + BNMA ridge plot + detailed slide deck
 ```
 #### Tips
 
@@ -50,6 +45,9 @@ I want: BNMA ridge plot + detailed slide deck
 <hr>
 
 ## $\color{red}\text{You can skip reading the text below to save your time}$
+
+If you want to continue reading, please <details>
+  <summary>Click me</summary>
 
 Or just say "run pipeline" and the agent will ask you to fill in, Leave any field blank if you don't have that resource — the pipeline adapts. For example:
 
@@ -88,16 +86,17 @@ You can also ask for one thing at a time:
 | Generate a BNMA ridge plot | "Generate a ridge plot from smb://lrlhps/users/..." |
 | Look up a trial | "Look up NCT04314817 on ClinicalTrials.gov" |
 
-## Supported Indications
+### Supported Indications
 
 AtD, Psoriasis, UC, RA, CRSwNP, PsA, Crohn's, SLE, Asthma, COPD, IPF, Allergic Rhinitis
 
-## Using with Claude App (claude.ai)
+### Using with Claude App (claude.ai)
 
 This agent also works on claude.ai with limited features (no local R/Python scripts, no auto-scan of `figures/`). Upload skill files from `.claude/skills/` as project knowledge, paste your source text, and ask for a deck — Claude generates a downloadable `.pptx` Artifact.
 
-## Notes
+### Notes
 
 - Public resources for competitors are always limited — the agent warns when inference is highly uncertain
 - All outputs include: **"Review is required before disclosure."**
 - If something looks wrong, just tell the agent to fix it
+</details>
